@@ -2,6 +2,7 @@ import ProfilePicture from "../../assets/images/profile/profile-picture.jpg";
 import ChatAlong from "../../assets/images/project/chatalong.jpeg";
 import CommunionHub from "../../assets/images/project/communionhub.jpeg";
 import LinkManager from "../../assets/images/project/linkmanager.jpeg";
+import FitsWear from "../../assets/images/project/fitswear.jpeg";
 import Notify from "../../assets/images/project/notify.jpeg";
 import IBES from "../../assets/images/project/ibes.jpeg";
 import WashAtDoor from "../../assets/images/project/wash@door.jpeg";
@@ -169,6 +170,29 @@ I thrive on creating responsive, visually appealing UIs while ensuring robust ba
 				"https://github.com/abhinavchoubey2000/links-manager-account-based",
 			demoLink: "https://links-manager-v20.vercel.app/",
 			isLive: true,
+		},
+		{
+			id: 9,
+			title: "FitsWear - A recycled shoe store",
+			description:
+				"FitsWear is a full-fledged eCommerce web application built using Next.js, designed to promote sustainable fashion by selling stylish recycled shoes. The platform offers a smooth and responsive UI with Tailwind CSS and rich animations powered by Framer Motion.It features secure user authentication via JWT, real-time analytics with Chart.js, and efficient data handling using Redux and Axios. Backend operations are supported with MongoDB, and environment configuration is managed using Dotenv.FitsWear is also a Progressive Web App (PWA), ensuring fast loading and offline access for a seamless shopping experience across devices.",
+			image: FitsWear,
+			technologies: [
+				"Next.Js",
+				"Redux",
+				"Tailwind CSS",
+				"Framer Motion",
+				"Mongo DB",
+				"React Icons",
+				"Json Web Token",
+				"Chart.Js",
+				"PWA",
+				"Axios",
+				"Dotenv",
+			],
+			githubLink: "https://github.com/abhinavchoubey2000/FitsWear/",
+			demoLink: "",
+			isLive: false,
 		},
 		{
 			id: 4,

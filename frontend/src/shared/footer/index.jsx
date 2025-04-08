@@ -1,10 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
 	Box,
 	Container,
 	Typography,
 	IconButton,
-	Link,
 	Grid,
 	useTheme,
 } from "@mui/material";
@@ -63,7 +63,7 @@ const Footer = () => {
 						<Typography
 							variant="body2"
 							component={Link}
-							href="/"
+							to="/"
 							color="text.secondary"
 							display="block"
 							sx={{
@@ -77,7 +77,7 @@ const Footer = () => {
 						<Typography
 							variant="body2"
 							component={Link}
-							href="/about"
+							to="/about"
 							color="text.secondary"
 							display="block"
 							sx={{
@@ -91,7 +91,7 @@ const Footer = () => {
 						<Typography
 							variant="body2"
 							component={Link}
-							href="/projects"
+							to="/projects"
 							color="text.secondary"
 							display="block"
 							sx={{
@@ -105,7 +105,7 @@ const Footer = () => {
 						<Typography
 							variant="body2"
 							component={Link}
-							href="/contact"
+							to="/contact"
 							color="text.secondary"
 							display="block"
 							sx={{
@@ -126,7 +126,7 @@ const Footer = () => {
 								<IconButton
 									aria-label="github"
 									component={Link}
-									href={profileData.socialLinks.github}
+									to={profileData.socialLinks.github}
 									target="_blank"
 									rel="noopener"
 									sx={{
@@ -141,7 +141,7 @@ const Footer = () => {
 								<IconButton
 									aria-label="linkedin"
 									component={Link}
-									href={profileData.socialLinks.linkedin}
+									to={profileData.socialLinks.linkedin}
 									target="_blank"
 									rel="noopener"
 									sx={{
@@ -156,7 +156,7 @@ const Footer = () => {
 								<IconButton
 									aria-label="instagram"
 									component={Link}
-									href={profileData.socialLinks.instagram}
+									to={profileData.socialLinks.instagram}
 									target="_blank"
 									rel="noopener"
 									sx={{
