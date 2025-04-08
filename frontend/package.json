@@ -1,0 +1,39 @@
+{
+  "name": "portfolio-dark-theme",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A dark theme personal portfolio website built with React.js, Vite, and Material UI",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fontsource/poppins": "^5.0.8",
+    "@fontsource/roboto": "^5.0.8",
+    "@gsap/react": "^2.1.2",
+    "@mui/icons-material": "^5.15.11",
+    "@mui/lab": "^5.0.0-alpha.166",
+    "@mui/material": "^5.17.1",
+    "@reduxjs/toolkit": "^2.6.1",
+    "gsap": "^3.12.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.22.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.1.0"
+  }
+}
