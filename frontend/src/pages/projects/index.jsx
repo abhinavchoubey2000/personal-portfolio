@@ -6,7 +6,6 @@ import {
 	Grid,
 	Card,
 	CardContent,
-	CardMedia,
 	Button,
 	Chip,
 	TextField,
@@ -34,19 +33,17 @@ const Projects = () => {
 	document.title = "Projects | Abhinav Choubey";
 
 	const headingRef = useRef(null);
+	const timerRef = useRef(null);
 	const descriptionRef = useRef(null);
 	const projectsRef = useRef([]);
 	const [searchTerm, setSearchTerm] = useState("");
+	const [searchTermInput, setSearchTermInput] = useState("");
 	const [filter, setFilter] = useState("all");
 	const [selectedProject, setSelectedProject] = useState(null);
 	const [openDialog, setOpenDialog] = useState(false);
 
 	const handleFilterChange = (event, newValue) => {
 		setFilter(newValue);
-	};
-
-	const handleSearchChange = (event) => {
-		setSearchTerm(event.target.value);
 	};
 
 	const handleProjectClick = (project) => {
@@ -57,6 +54,17 @@ const Projects = () => {
 	const handleCloseDialog = () => {
 		setOpenDialog(false);
 	};
+
+	// I have used debouncing for better optimization
+	const handleDebounceSearch = (() => {
+		return (event) => {
+			setSearchTermInput(event.target.value);
+			if (timerRef.current) clearTimeout(timerRef.current);
+			timerRef.current = setTimeout(() => {
+				setSearchTerm(event.target.value);
+			},1200);
+		};
+	})();
 
 	const filteredProjects = profileData.projects.filter((project) => {
 		// Filter by search term
@@ -88,7 +96,7 @@ const Projects = () => {
 		tl2.from(projectsRef.current, {
 			opacity: 0,
 			stagger: 0.3,
-			duration:2
+			duration: 2,
 		});
 	});
 
@@ -128,8 +136,8 @@ const Projects = () => {
 								fullWidth
 								placeholder="Search projects by name, description, or technology..."
 								variant="outlined"
-								value={searchTerm}
-								onChange={handleSearchChange}
+								value={searchTermInput}
+								onChange={handleDebounceSearch}
 								InputProps={{
 									startAdornment: (
 										<InputAdornment position="start">
