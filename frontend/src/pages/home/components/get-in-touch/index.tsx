@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useNavigate } from "react-router-dom";
-import { current } from "@reduxjs/toolkit";
 
 export function GetInTouch() {
 	const headingRef = useRef(null);

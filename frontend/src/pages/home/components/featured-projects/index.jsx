@@ -12,16 +12,16 @@ import { useNavigate } from "react-router-dom";
 import { ArrowForward, GitHub } from "@mui/icons-material";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import {CustomToolTip} from "../../../../library"
+import { CustomToolTip } from "../../../../library";
 import React, { useRef } from "react";
 
 export function FeaturedProjects({ projectsData }) {
 	const navigate = useNavigate();
 	const featuredProjects = projectsData.slice(0, 3);
 	const headingRef = useRef(null);
-	const buttonRef = useRef(null)
+	const buttonRef = useRef(null);
 	const projectsRef = useRef([]);
-	const containerRef = useRef(null)
+	const containerRef = useRef(null);
 	useGSAP(() => {
 		const tl = gsap.timeline();
 		const tl2 = gsap.timeline();
@@ -39,10 +39,10 @@ export function FeaturedProjects({ projectsData }) {
 				scrub: 1,
 			},
 		});
-		
+
 		tl.from(buttonRef.current, {
 			opacity: 0,
-			x:-100,
+			x: -100,
 			duration: 1,
 			delay: 2,
 			stagger: 1,
@@ -54,19 +54,19 @@ export function FeaturedProjects({ projectsData }) {
 				scrub: 1,
 			},
 		});
-		
+
 		tl2.from(projectsRef.current, {
 			opacity: 0,
 			y: 200,
 			duration: 1,
 			delay: 1,
-			stagger:1,
+			stagger: 1,
 			scrollTrigger: {
 				scroller: "body",
 				trigger: containerRef.current,
-				start: "top 70%",
+				start: "top 90%",
 				end: "bottom 100%",
-				scrub:1,
+				scrub: 1,
 			},
 		});
 	});

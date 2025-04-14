@@ -53,7 +53,7 @@ export function MySkills({ skills }) {
 			scrollTrigger: {
 				scroller: "body",
 				trigger: containerRef.current,
-				start: "top 70%",
+				start: "top 90%",
 				end: "bottom 100%",
 				scrub: 1,
 			},
@@ -67,7 +67,7 @@ export function MySkills({ skills }) {
 			scrollTrigger: {
 				scroller: "body",
 				trigger: containerRef.current,
-				start: "top 70%",
+				start: "top 90%",
 				end: "bottom 100%",
 				scrub: 1,
 			},
@@ -81,7 +81,7 @@ export function MySkills({ skills }) {
 			scrollTrigger: {
 				scroller: "body",
 				trigger: containerRef.current,
-				start: "top 70%",
+				start: "top 90%",
 				end: "bottom 100%",
 				scrub: 1,
 			},
